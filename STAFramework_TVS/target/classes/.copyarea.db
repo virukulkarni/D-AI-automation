@@ -1,0 +1,11 @@
+ClearCase CopyAreaDB|4
+vobs\ATA\STAFramework\src\pomTestApps\STAcore
+2
+7
+e:XL_Reader.java|1|15f0fc68d07|4129|2a8d24d|a19dd587656211e79315005056ae39c8|0
+f:Operations.java|1|15f0fc68d11|2c99|ad130673|a0ee82ff656211e79318005056ae39c8|0
+13:POMSuiteRunner.java|1|15f0fc68d00|305c|923cdc53|8a1b92e554bb11e795a6005056ae39c8|0
+16:OperationExecutor.java|1|15f0fc68cb5|912|b1bed463|47cc027917ba4cbebd5236f66b5cadea|0
+f:LogHandler.java|1|15f0fc68c19|af|c2e93af1|1c9dfc9f69ff4a0fbac431a34c624f3a|0
+10:MXONECommon.java|1|15f0fc68c51|3c14|1255b298|9de7036154284d4bbf04e55b25c830fc|0
+f:SSHManager.java|1|15f0fc68ce1|f78|8166cc0b|e106b958aa7a456ba06c9d3dda8fdae0|0

@@ -1,0 +1,12 @@
+ClearCase CopyAreaDB|4
+vobs\ATA\STAFramework\src\datatable
+2
+8
+14:CommonInterface.java|1|15f0fc5ccab|3f|be8f14bf|160af91ef8d74957a611a1e657960fe5|0
+18:OriaGlobalVariables.java|1|15f0fc5cdb6|676a|96031b95|1496a5de65d04c1d9d7bcefbece332c4|0
+14:ORIAInitializer.java|1|15fc8a3e8da|24730|6df15643|db802a7a7f474a07bd6d2d4a13296831|0
+1b:NextGenGlobalVariables.java|1|15f0fc5cd34|952|9d232f7f|69570ed7f65f47ab873a841bb46e3bf0|0
+17:NextGenInitializer.java|1|15f0fc5cdac|2e7c|3c849276|2d62277bbdf34e818aef66f3edcec8bb|0
+11:ConfigReader.java|1|15f0fc5ccc7|847|d3ef9f55|57ced49dd3ff4b92a3e43b43c04bd726|0
+f:ReadingXLS.java|1|15f0fc5cbd8|fc6|4b1e77b3|d5083ec5bb6a44029daf1b38865fbfd8|0
+12:Xlfile_Reader.java|1|15f0fc5cc3f|36d1|66888da|3e73463d714c41ad9d48d09188c8a35c|0

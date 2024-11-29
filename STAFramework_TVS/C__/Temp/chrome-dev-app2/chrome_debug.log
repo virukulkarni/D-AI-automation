@@ -1,0 +1,12 @@
+[66293:66293:0819/123325.628943:WARNING:chrome_main_delegate.cc(742)] This is Chrome version 125.0.6422.112 (not a warning)
+[66293:66293:0819/123325.918780:INFO:config_dir_policy_loader.cc(118)] Skipping mandatory platform policies because no policy file was found at: /etc/opt/chrome/policies/managed
+[66293:66293:0819/123325.918893:INFO:config_dir_policy_loader.cc(118)] Skipping recommended platform policies because no policy file was found at: /etc/opt/chrome/policies/recommended
+[66293:66293:0819/123326.217822:INFO:chrome_browser_cloud_management_controller.cc(168)] Starting CBCM Controller Initialization
+[66293:66293:0819/123326.217891:INFO:chrome_browser_cloud_management_controller.cc(196)] No machine level policy manager exists.
+[66293:66293:0819/123326.495777:WARNING:browser_management_service.cc(128)] EnterpriseLogoUrl fetch failed with error code -1 and MIME type 
+[66332:66332:0819/123326.567257:WARNING:sandbox_linux.cc(436)] InitializeSandbox() called with multiple threads in process gpu-process.
+[66293:66293:0819/123326.627765:WARNING:bluez_dbus_manager.cc(248)] Floss manager not present, cannot set Floss enable/disable.
+[66293:66293:0819/123327.402928:ERROR:object_proxy.cc(576)] Failed to call method: org.freedesktop.ScreenSaver.GetActive: object_path= /org/freedesktop/ScreenSaver: org.freedesktop.DBus.Error.NotSupported: This method is not part of the idle inhibition specification: https://specifications.freedesktop.org/idle-inhibit-spec/latest/
+[66335:66350:0819/123331.053755:WARNING:sqlite_persistent_store_backend_base.cc(198)] Failed to post task from FlushAndNotifyInBackground@net/extras/sqlite/sqlite_persistent_store_backend_base.cc:247 to client_task_runner_.
+[66335:66350:0819/123331.054120:WARNING:sqlite_persistent_store_backend_base.cc(198)] Failed to post task from FlushAndNotifyInBackground@net/extras/sqlite/sqlite_persistent_store_backend_base.cc:247 to client_task_runner_.
+[66293:66293:0819/123331.112677:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.

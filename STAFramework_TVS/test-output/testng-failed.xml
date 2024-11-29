@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TVS MOTOR Test Automation]">
+  <test thread-count="5" name="TVS MOTOR Test Automation(failed)">
+    <classes>
+      <class name="pomTestApps.Test.com.automation.mitel.clearspan.opeasy.Launch_TVSMotorWebsite_Test">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="beforemethod"/>
+          <include name="Reporting_OpeningTheReportingMenu" invocation-numbers="0"/>
+          <include name="afterTest"/>
+          <include name="afterMethod"/>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- pomTestApps.Test.com.automation.mitel.clearspan.opeasy.Launch_TVSMotorWebsite_Test -->
+    </classes>
+  </test> <!-- TVS MOTOR Test Automation(failed) -->
+</suite> <!-- Failed suite [TVS MOTOR Test Automation] -->

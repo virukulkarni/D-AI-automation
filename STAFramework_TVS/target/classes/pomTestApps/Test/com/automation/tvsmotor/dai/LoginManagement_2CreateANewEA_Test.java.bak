@@ -1,0 +1,107 @@
+package pomTestApps.Test.com.automation.mitel.clearspan.opeasy;
+
+/**************************************************
+#Project Name: MiTEL_CLEARSPAN – Opeasy Automation
+
+#Test case Name: LoginManagement_EnterpriseLoginRules_Test()
+#Description:1. This test case verifies Login Rules on Login Management page
+#Input Parameters: EnterpriseName
+#Owner: Virupakshayya Kulkarni
+#Author: Virupakshayya Kulkarni
+#Date of creation: 28-Nov-17
+#Name of person modifying: (Tester Name): 
+#Date of modification: 
+â€˜**************************************************/
+
+
+import java.util.Hashtable;
+
+import org.testng.annotations.Test;
+
+import pomTestApps.STAcore.CLEARSPANCommon;
+import pomTestApps.STAcore.Operations;
+import pomTestApps.STAcore.POMSuiteRunner;
+import pomTestApps.Test.com.automation.mitel.clearspan.opeasy.elements.LoginManagementPages;
+import pomTestApps.Test.com.automation.mitel.clearspan.opeasy.elements.OpeasyCommonPageElements;
+
+public class LoginManagement_2CreateANewEA_Test extends BaseClass{
+	
+	POMSuiteRunner POMSuiteRunner = new POMSuiteRunner();
+	Operations oprs = new Operations();
+	
+	public static Hashtable<String,String> hashTable= new Hashtable<String,String>();
+	public CLEARSPANCommon 	clearspanCommon;
+	
+	
+	@Test(dataProvider=DP)	
+	public void LoginManagement_CreateANewEA(
+
+			String Browser, String clearspanUrl, String opeasyUrl, String OpeasyUsername, String OpeasyPassword,
+			String ClearspanUserName, String ClearspanPassword, String strEAUserName, String strEAUserPassword, 
+			String strGroups
+
+	) throws Exception {
+		
+		clearspanCommon=new CLEARSPANCommon(driver, ptr);
+		
+		String strTestcaseName = "Login Management > Create a new EA";
+				
+		clearspanCommon.navigateOpeasyHomePage();
+		clearspanCommon.navigateLoginManagemtentPage();
+		clearspanCommon.navigateOpeasyCommonPageElements();
+		
+		String strOpeasy_SA_Username = POMSuiteRunner.ConfigStore.get("Opeasy_SA_Username");
+		String strOpeasy_SA_Password = POMSuiteRunner.ConfigStore.get("Opeasy_SA_Password");
+
+		try {
+			// Step 1. Login to OpEasy as a System Admin
+				clearspanCommon.opeasyClearLoginSessions(opeasyUrl, strOpeasy_SA_Username, strOpeasy_SA_Password);
+			
+			//Step 2. Select Login Management.
+			ptr.click(clearspanCommon.opeasyhome.link_LoginManagement, "Clicking on link: Login Managemen");
+					
+			//Step 3. The Login Management page is displayed.
+			ptr.isElementPresent(LoginManagementPages.text_LoginManagement_ScreenName, 
+					"Verifying: The Login Management page is displayed");
+
+			//4. Click the Add button. 
+			ptr.click(OpeasyCommonPageElements.btn_Add, "Click the Add button");
+			
+			//5. The OpEasy Administrator Add page is displayed.
+			ptr.isElementPresent(LoginManagementPages.text_Administrator_Add_ScreenName, 
+					"Verifying: Administrator Add page is displayed");
+			
+			//5.5 Delete the user if already exists			
+		//	clearspanCommon.deleteLoginUser(strEAUserName);
+			
+			//6. Create a new Enterprise Manager and assign the Admin more than one Enterprise.
+			clearspanCommon.addAdminUser("Enterprise Administrator", strEAUserName, strEAUserPassword, strOpeasy_SA_Username, strGroups);
+			
+			//7. Verify the Login management screen is displayed
+			ptr.isElementPresent(LoginManagementPages.text_LoginManagement_ScreenName, 
+					"Verify the Login management screen is displayed");			
+			
+		}
+		
+	catch(Exception exec)
+	{
+		exec.getStackTrace();
+		ptr.updateStep(strTestcaseName , "Fail");
+	}
+	
+	finally {
+		
+		//Logging out from the application
+		clearspanCommon.logoutOpeasy();
+		
+		//Generating report for the test case
+		ptr.endReport();
+		
+		}
+		
+	}
+	
+}
+
+
+

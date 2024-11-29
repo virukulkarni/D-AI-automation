@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TVS MOTOR Test Automation" parallel="false">
+	<parameter name="package-name" value="pomTestApps.Test.com.automation.tvsmotor.dai" />	<!--  Test cases package name -->
+	<parameter name="suite-name" value="TVS MOTOR Test Automation" />
+	<parameter name="config-name" value="AUTOMATION_Config.xls" />    								<!--  Test Data xls sheet name -->
+	<parameter name="property-name" value="AUTOMATION" /> 											<!--  Project Property file name -->
+	<parameter name="Files" value="CS_Files" /> 											<!--  MX1 all files to store here --> 
+	<parameter name="Admin_User" value="viru" />											<!--  SSH Admin User for putty login -->			
+	<test name="TVS MOTOR AUTOMATION SUITE">  
+    <classes>
+		<class name="pomTestApps.STAcore.POMSuiteRunner"></class>  
+	</classes>
+	</test> 
+</suite>

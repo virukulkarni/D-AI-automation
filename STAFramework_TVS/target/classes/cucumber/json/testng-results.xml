@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" total="2" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="23325" started-at="2016-05-24T14:21:08Z" finished-at="2016-05-24T14:21:31Z">
+    <groups>
+    </groups>
+    <test name="Upload automation results" duration-ms="23325" started-at="2016-05-24T14:21:08Z" finished-at="2016-05-24T14:21:31Z">
+      <class name="appium.Calculator">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:appium.Calculator@d2cc05a]" name="setUp" duration-ms="17645" started-at="2016-05-24T19:51:08Z" finished-at="2016-05-24T19:51:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testCal()[pri:0, instance:appium.Calculator@d2cc05a]" name="testCal" duration-ms="3413" started-at="2016-05-24T19:51:26Z" finished-at="2016-05-24T19:51:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCal -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:appium.Calculator@d2cc05a]" name="teardown" duration-ms="1225" started-at="2016-05-24T19:51:30Z" finished-at="2016-05-24T19:51:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- appium.Calculator -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

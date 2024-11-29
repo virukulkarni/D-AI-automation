@@ -1,0 +1,26 @@
+[
+  {
+    "Ser No": 1,
+    "Test Case ID": 765289,
+    "Test Case Name": "Reporting_1OpeningTheReportingMenu_Test",
+    "Test Case Description": "Reporting - Opening the Reporting Menu",
+    "Component": "",
+    "Status": "Pass"
+  },
+  {
+    "Ser No": 2,
+    "Test Case ID": 765291,
+    "Test Case Name": "Reporting_3LicenseOptionalServicesReport_Test",
+    "Test Case Description": "License & Optional Services Report",
+    "Component": "",
+    "Status": "Pass"
+  },
+  {
+    "Ser No": 3,
+    "Test Case ID": 124357,
+    "Test Case Name": "SetupFetchOpeasyBuildInformation_Test",
+    "Test Case Description": "Automation Setup - Get Opeasy Build Information for reporting",
+    "Component": "",
+    "Status": "Pass"
+  }
+]

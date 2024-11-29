@@ -1,0 +1,9 @@
+ClearCase CopyAreaDB|4
+vobs\ATA\STAFramework\src\util
+2
+5
+d:KillExcel.bat|1|15f0fc5cf22|24|c8660a06|f89acbb65f444f1388ff8347e4c26513|0
+f:KillBrowser.bat|1|15f0fc5cea5|a1|15972fd5|6a1f50f079ac4842ae0dd60baf7349f4|0
+23:checkAndSetEnvironmentVariable.java|1|15f0fc5cebe|a12|763c0bc4|bbf59c17791d4a958c03c29de5a52379|0
+d:TestUtil.java|1|15f0fc5ce2e|ef7|c9909f73|4877c0b955a74205996e08a73604af49|0
+f:LoggerUtil.java|1|15f0fc5ceab|886|b95bc389|7ce4fa9ac0b94f4385307cc72157be81|0

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" errors="0" failures="1" name="com.OpeasyTest" skipped="0" tests="5" time="0.036" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd">
+  <testcase name="StoreBilling_2_Login_as_super_user_user_profile_add_UserType_normal_user_Test" classname="StoreBilling_2_Login_as_super_user_user_profile_add_UserType_normal_user_Test" time="0.008">
+	<test-method status="PASS" signature="test2()" name="test2" duration-ms="0"
+              started-at="2007-05-28T12:14:37Z" description="someDescription1"
+              finished-at="2007-05-28T12:14:37Z">
+    </test-method>
+
+    <system-out><![CDATA[This is executed before each Test
+This is exceuted after each Test
+]]></system-out>
+  </testcase>
+  
+  <testcase name="StoreBilling_1_Login_as_super_user_user_profile_add_UserType_normal_user_Test" classname="StoreBilling_1_Login_as_super_user_user_profile_add_UserType_normal_user_Test" time="0.007">
+  
+  
+    <failure type="java.lang.AssertionError">java.lang.AssertionError
+	at com.javacodegeeks.examples.junitmavenexample.CalculatorTest.testEqual11(CalculatorTest.java:59)
+	</failure>
+    <system-out><![CDATA[This is executed before each Test
+This is exceuted after each Test
+]]>	</system-out>
+  </testcase>
+  
+<testcase classname="LoginMgmnt_ResetPassword_1_Super_User_resetting_password_of_System_Administrator_Test" name="LoginMgmnt_ResetPassword_1_Super_User_resetting_password_of_System_Administrator_Test" time="0.007"><failure/><system-out/></testcase></testsuite>

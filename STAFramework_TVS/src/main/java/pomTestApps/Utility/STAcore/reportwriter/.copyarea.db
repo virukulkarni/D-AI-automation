@@ -1,0 +1,7 @@
+ClearCase CopyAreaDB|4
+vobs\ATA\STAFramework\src\pomTestApps\Utility\STAcore\reportwriter
+2
+3
+18:GenerateExcelReport.java|1|15f0fc68bdc|bc0|5a05b938|d11baf412cf64b76a6fb55fc40710c22|0
+17:GenerateHtmlReport.java|1|15f0fc68be7|4341|2043d16b|7dbc1bbb2a50458cafea598cd8738499|0
+16:GeneratePDFReport.java|1|15f0fc68c0e|b471|3dc1a876|adf33b1299e94b099c3dfa26b94c2aa6|0

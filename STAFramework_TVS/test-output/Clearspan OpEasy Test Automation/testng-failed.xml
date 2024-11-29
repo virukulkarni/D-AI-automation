@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Clearspan OpEasy Test Automation]" guice-stage="DEVELOPMENT">
+  <parameter name="config-name" value="CLEARSPAN_Config.xls"/>
+  <parameter name="suite-name" value="Clearspan-OpEasy Test Automation"/>
+  <parameter name="property-name" value="CLEARSPAN"/>
+  <parameter name="Files" value="CS_Files"/>
+  <parameter name="Admin_User" value="viru"/>
+  <parameter name="package-name" value="pomTestApps.Test.com.automation.mitel.clearspan.opeasy"/>
+  <test thread-count="5" name="CLEARSPAN OPEASY AUTOMATION SUITE(failed)">
+    <classes>
+      <class name="pomTestApps.STAcore.POMSuiteRunner">
+        <methods>
+          <include name="Run" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- pomTestApps.STAcore.POMSuiteRunner -->
+    </classes>
+  </test> <!-- CLEARSPAN OPEASY AUTOMATION SUITE(failed) -->
+</suite> <!-- Failed suite [Clearspan OpEasy Test Automation] -->

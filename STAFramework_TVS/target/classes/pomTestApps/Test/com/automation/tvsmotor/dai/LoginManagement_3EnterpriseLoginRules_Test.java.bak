@@ -1,0 +1,100 @@
+package pomTestApps.Test.com.automation.mitel.clearspan.opeasy;
+
+import org.testng.annotations.Test;
+
+import pomTestApps.STAcore.CLEARSPANCommon;
+import pomTestApps.STAcore.Operations;
+import pomTestApps.STAcore.POMSuiteRunner;
+import pomTestApps.Test.com.automation.mitel.clearspan.opeasy.elements.LoginManagementPages;
+import pomTestApps.Test.com.automation.mitel.clearspan.opeasy.elements.OpeasyCommonPageElements;
+
+public class LoginManagement_3EnterpriseLoginRules_Test extends BaseClass {
+
+	POMSuiteRunner POMSuiteRunner = new POMSuiteRunner();
+	Operations oprs = new Operations();
+	
+	public CLEARSPANCommon clearspanCommon;
+
+	@Test(dataProvider = DP)
+	public void LoginManagement_EnterpriseLoginRules(String Browser,			
+			String clearspanUrl,
+			String opeasyUrl,
+			String OpeasyUsername,
+			String OpeasyPassword,
+			String ClearspanUserName,
+			String ClearspanPassword,
+			String strEntDropDownEntry
+			) throws Exception {
+
+		clearspanCommon = new CLEARSPANCommon(driver, ptr);
+
+		clearspanCommon.navigateOpeasyHomePage();
+		clearspanCommon.navigateLoginManagemtentPage();
+		clearspanCommon.navigateOpeasyCommonPageElements();
+		
+		String strTestcaseName = "Login Management - Enterprise Login Rules";
+
+		String strOpeasy_SA_Username = POMSuiteRunner.ConfigStore.get("Opeasy_SA_Username");
+		String strOpeasy_SA_Password = POMSuiteRunner.ConfigStore.get("Opeasy_SA_Password");
+
+		try {
+			// Step 1. Login to OpEasy as a System Admin
+				clearspanCommon.opeasyClearLoginSessions(opeasyUrl, strOpeasy_SA_Username, strOpeasy_SA_Password);
+
+			// Step 2. Select Login Management.
+			ptr.click(clearspanCommon.opeasyhome.link_LoginManagement, "Clicking on link: Login Managemen");
+
+			// Step 3. Click the Login Rules button
+			ptr.click(LoginManagementPages.btn_Login_Rules, "Click button Login Rules");
+
+			// Step 5. Select one of the Enterprises the new EA is assigned to.
+			// Step 5. Select one of the Enterprises the new EA is assigned to.
+			ptr.selectDropdownByValue(OpeasyCommonPageElements.dropdown_Enterprise, strEntDropDownEntry,
+					"Select Enterprises the new EA is assigned to :" + strEntDropDownEntry);
+			
+			// Step 3.5. Click Use separate Login Rules for each Enterprise radio button
+			ptr.selectRadioButton("Use Enterprise Login Rules");
+			
+			// Step 4. The Login Rules Modify page is displayed.
+			ptr.isElementPresent(LoginManagementPages.text_Login_Rules_Modify_ScreenName,
+					"Verify: The Login Rules Modify page is displayed");
+
+
+			// Step 5. The page refreshes and a bolded message is displayed:
+			// "Login Rules - Enterprise: <enterprise name> -- Only used by EAs.
+			// GAs and DAs."
+			String strLoginRulesHeader = ptr.getText(LoginManagementPages.text_Login_Rules_Header,
+					"The page refreshes and a bolded message is displayed: Login Rules - Enterprise: <enterprise name> "
+					+ "-- Only used by EAs. GAs and DAs.");
+			if(strLoginRulesHeader.equals("Login Rules - Enterprise: 'AutomationTest' -- Only used by EAs, GAs, and DAs")){
+				ptr.updateStep("Login Rules Header is displayed as expected: "
+						+ "Login Rules - Enterprise: 'AutomationTest' -- Only used by EAs, GAs, and DAs", "Pass");
+				
+			} else {
+				ptr.updateStep("Login Rules Header is NOT displayed as expected: "
+						+ "Login Rules - Enterprise: 'AutomationTest' -- Only used by EAs, GAs, and DAs", "Fail");
+			}
+			
+			// 6. Verify the Login management page is displayed
+			ptr.isElementPresent(LoginManagementPages.text_LoginManagement_ScreenName,
+					"Verify the Login management screen is displayed");
+			
+			ptr.updateStep(strTestcaseName, "Pass");			
+			
+		} catch (Exception exec) {
+			exec.getStackTrace();
+			ptr.updateStep(strTestcaseName, "Fail");
+		}
+
+		finally {
+			// Logging out from the application
+			clearspanCommon.logoutOpeasy();
+
+			// Generating report for the test case
+			ptr.endReport();
+
+		}
+
+	}
+
+}

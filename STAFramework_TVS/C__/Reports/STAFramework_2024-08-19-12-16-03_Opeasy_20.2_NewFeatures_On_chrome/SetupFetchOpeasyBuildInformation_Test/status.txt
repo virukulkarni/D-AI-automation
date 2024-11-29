@@ -1,0 +1,1 @@
+NotRun###124357###Automation Setup - Get Opeasy Build Information for reporting
